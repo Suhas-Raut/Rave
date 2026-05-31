@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Opening Twitch...</title>
+</head>
+<body>
+
+<script>
+const twitchUrl = "https://www.twitch.tv/ravexd_";
+const ua = navigator.userAgent;
+
+if (/Android/i.test(ua)) {
+
+    window.location.href =
+    "intent://www.twitch.tv/ravexd_#Intent;package=tv.twitch.android.app;scheme=https;S.browser_fallback_url=" +
+    encodeURIComponent(twitchUrl) + ";end";
+
+}
+else if (/iPhone|iPad|iPod/i.test(ua)) {
+
+    window.location.href =
+    "twitch://stream/ravexd_";
+
+    setTimeout(() => {
+        window.location.href = twitchUrl;
+    }, 2000);
+
+}
+else {
+
+    window.location.href = twitchUrl;
+
+}
+</script>
+
+</body>
+</html>
