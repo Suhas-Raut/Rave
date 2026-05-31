@@ -50,6 +50,43 @@ p{
 }
 </style>
 </head>
+<script>
+function openYouTube() {
+    const webUrl = "https://www.youtube.com/@RaveOP8";
+
+    if (/Android/i.test(navigator.userAgent)) {
+        window.location.href =
+        "intent://www.youtube.com/@RaveOP8#Intent;package=com.google.android.youtube;scheme=https;S.browser_fallback_url=" +
+        encodeURIComponent(webUrl) + ";end";
+    } else if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+        window.location.href = "youtube://www.youtube.com/@RaveOP8";
+
+        setTimeout(() => {
+            window.location.href = webUrl;
+        }, 1500);
+    } else {
+        window.location.href = webUrl;
+    }
+}
+
+function openTwitch() {
+    const webUrl = "https://www.twitch.tv/ravexd_";
+
+    if (/Android/i.test(navigator.userAgent)) {
+        window.location.href =
+        "intent://www.twitch.tv/ravexd_#Intent;package=tv.twitch.android.app;scheme=https;S.browser_fallback_url=" +
+        encodeURIComponent(webUrl) + ";end";
+    } else if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+        window.location.href = "twitch://stream/ravexd_";
+
+        setTimeout(() => {
+            window.location.href = webUrl;
+        }, 1500);
+    } else {
+        window.location.href = webUrl;
+    }
+}
+</script>
 <body>
 
 <div class="container">
@@ -58,13 +95,13 @@ p{
     <p>Namaste Dosto, I'm RAVE.<br>
     Welcome to the Rave Army.</p>
 
-    <a class="btn" href="https://www.youtube.com/@RaveOP8">
-        YOUTUBE
-    </a>
+    <a class="btn" href="#" onclick="openYouTube()">
+    YOUTUBE
+</a>
 
-    <a class="btn" href="https://www.twitch.tv/ravexd_">
-        TWITCH
-    </a>
+<a class="btn" href="#" onclick="openTwitch()">
+    TWITCH
+</a>
 
 </div>
 
