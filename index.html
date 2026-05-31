@@ -40,8 +40,9 @@ body::before{
     position:relative;
     z-index:10;
 
-    width:90%;
-    max-width:500px;
+     width:min(92%,500px);
+    margin:20px;
+    padding:30px 24px;
 
     text-align:center;
 
@@ -61,7 +62,9 @@ body::before{
 }
 
 h1{
-    font-size:80px;
+    font-family:"ObelixPro", sans-serif;
+    font-size:clamp(48px, 12vw, 72px);
+    line-height:1;
     color:#1aff01;
     margin:0;
     font-family: "ObelixPro", sans-serif;
@@ -203,7 +206,7 @@ function openTwitch() {
   class="avatar">
     <h1>RAVE</h1>
 
-    <p>⚔️ Welcome to the Rave Army ⚔️</p>
+    <p>Gamer & Streamer</p>
 
     <a class="btn" href="./youtube.html">
     YOUTUBE - RaveOP
