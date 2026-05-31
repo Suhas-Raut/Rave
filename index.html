@@ -3,51 +3,158 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>RAVE</title>
 
 <style>
+    @font-face {
+    font-family: "ObelixPro";
+    src: url("./fonts/ObelixPro.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
 body{
     margin:0;
-    background:#0a0a0a;
-    color:white;
-    font-family:Arial,sans-serif;
+    min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    min-height:100vh;
-}
+    font-family:Arial,sans-serif;
+    overflow:hidden;
 
+    background:url('./img/banner.jpg') center center/cover no-repeat;
+}
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.15);
+
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(4px);
+
+    z-index:0;
+}
 .container{
-    text-align:center;
+    position:relative;
+    z-index:10;
+
     width:90%;
     max-width:500px;
+
+    text-align:center;
+
+    background:rgba(15, 0, 0, 0.059);
+    backdrop-filter:blur(25px);
+    -webkit-backdrop-filter:blur(25px);
+
+    border:1px solid rgba(255,255,255,0.1);
+
+    border-radius:30px;
+
+    padding:40px;
+
+    box-shadow:
+    0 8px 32px rgba(0,0,0,0.4),
+    inset 0 1px 0 rgba(255,255,255,0.1);
 }
 
 h1{
     font-size:80px;
-    color:#ff1f1f;
+    color:#1aff01;
     margin:0;
+    font-family: "ObelixPro", sans-serif;
+    font-size: 72px;
+    margin: 0;
 }
 
 p{
-    color:#aaa;
+    color:#ffffff;
+    font-family: "ObelixPro", sans-serif;
     margin-bottom:30px;
 }
 
 .btn{
     display:block;
     text-decoration:none;
-    background:#ff1f1f;
-    color:white;
+    font-family: "ObelixPro", sans-serif;
+
+    margin:14px 0;
     padding:16px;
-    margin:12px 0;
-    border-radius:8px;
-    font-weight:bold;
+
+    color:#000000;
+    font-weight:600;
+    letter-spacing:1px;
+
+    background:rgb(255, 255, 255);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+
+    border:3px solid rgba(34, 203, 0, 0.747);
+    border-radius:16px;
+
+    transition:.25s ease;
+
+    box-shadow:
+        0 0 10px rgba(0,255,120,0.12),
+        inset 0 0 10px rgba(0,255,120,0.04);
 }
 
 .btn:hover{
-    opacity:.9;
+    transform:translateY(2px);
+    color:#fe0000;
+    border-color:#00ff15;
+
+    box-shadow:
+        0 0 15px rgba(0,255,120,0.25),
+        0 0 30px rgba(0,255,120,0.12);
 }
+.btn2{
+    display:block;
+    text-decoration:none;
+    font-family: "ObelixPro", sans-serif;
+
+    margin:14px 0;
+    padding:16px;
+
+    color:#000000;
+    font-weight:600;
+    letter-spacing:1px;
+
+    background:rgb(255, 255, 255);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+
+    border:3px solid rgba(34, 203, 0, 0.747);
+    border-radius:16px;
+
+    transition:.25s ease;
+
+    box-shadow:
+        0 0 10px rgba(0,255,120,0.12),
+        inset 0 0 10px rgba(0,255,120,0.04);
+}
+.btn2:hover{
+    transform:translateY(2px);
+    color:#b200fe;
+    border-color:#00ff15;
+
+    box-shadow:
+        0 0 15px rgba(0,255,120,0.25),
+        0 0 30px rgba(0,255,120,0.12);
+}
+.avatar{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    display:block;
+    margin:0 auto 20px auto;
+    border:3px solid #4cff1f;
+    box-shadow:0 0 25px rgba(31, 255, 50, 0.35);
+}
+
 </style>
 </head>
 <script>
@@ -90,17 +197,23 @@ function openTwitch() {
 <body>
 
 <div class="container">
+<img
+  src="https://yt3.googleusercontent.com/T3yTtM1v1mmNcLsegmQJ9nQs0Gkw4e_aanEd1EFTuuP9PfiH9SlRvOOM4dbrB1llWN4En44Yrg=s160-c-k-c0x00ffffff-no-rj"
+  alt="RAVE Profile"
+  class="avatar">
     <h1>RAVE</h1>
 
-    <p>Namaste Dosto, I'm RAVE.<br>
-    Welcome to the Rave Army.</p>
+    <p>⚔️ Welcome to the Rave Army ⚔️</p>
 
     <a class="btn" href="./youtube.html">
-    YOUTUBE
+    YOUTUBE - RaveOP
 </a>
 
-<a class="btn" href="./twitch.html">
+<a class="btn2" href="./twitch.html">
     TWITCH
+</a>
+ <a class="btn" href="./yt2.html">
+    YOUTUBE - RaveCS
 </a>
 
 </div>
