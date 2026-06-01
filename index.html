@@ -86,17 +86,19 @@ p{
     margin:14px 0;
     padding:16px;
 
-    color:#000000;
+    color:#f0f0f0;
     font-weight:600;
     letter-spacing:1px;
-
-    background:rgb(255, 255, 255);
+    background-image: radial-gradient(circle at top center, rgb(255, 106, 0),rgb(255, 0, 0));
+    /* background:rgb(255, 255, 255); */
     backdrop-filter:blur(12px);
     -webkit-backdrop-filter:blur(12px);
 
-    border:3px solid rgba(34, 203, 0, 0.747);
+    /* border:3px solid rgba(34, 203, 0, 0.747); */
     border-radius:16px;
-
+ box-shadow:
+        0 0 10px rgba(255, 0, 0, 0.12),
+        inset 0 0 10px rgba(255, 0, 0, 0.04);
     transition:.25s ease;
 
     box-shadow:
@@ -106,12 +108,11 @@ p{
 
 .btn:hover{
     transform:translateY(2px);
-    color:#fe0000;
-    border-color:#00ff15;
+    color:#ffffff;
 
     box-shadow:
-        0 0 15px rgba(0,255,120,0.25),
-        0 0 30px rgba(0,255,120,0.12);
+        0 0 15px rgba(255, 0, 0, 0.25),
+        0 0 30px rgba(255, 0, 0, 0.12);
 }
 .btn2{
     display:block;
@@ -121,31 +122,29 @@ p{
     margin:14px 0;
     padding:16px;
 
-    color:#000000;
+    color:#ffffff;
     font-weight:600;
     letter-spacing:1px;
+    background-image: radial-gradient(circle at top center, rgb(207, 0, 230),rgb(166, 0, 255));
 
-    background:rgb(255, 255, 255);
     backdrop-filter:blur(12px);
     -webkit-backdrop-filter:blur(12px);
 
-    border:3px solid rgba(34, 203, 0, 0.747);
     border-radius:16px;
 
     transition:.25s ease;
 
     box-shadow:
-        0 0 10px rgba(0,255,120,0.12),
-        inset 0 0 10px rgba(0,255,120,0.04);
+        0 0 10px rgba(144, 0, 255, 0.12),
+        inset 0 0 10px rgba(140, 0, 255, 0.04);
 }
 .btn2:hover{
     transform:translateY(2px);
-    color:#b200fe;
-    border-color:#00ff15;
+    color:#ffffff;
 
     box-shadow:
-        0 0 15px rgba(0,255,120,0.25),
-        0 0 30px rgba(0,255,120,0.12);
+        0 0 15px rgba(153, 0, 255, 0.25),
+        0 0 30px rgba(187, 0, 255, 0.12);
 }
 .avatar{
     width:120px;
